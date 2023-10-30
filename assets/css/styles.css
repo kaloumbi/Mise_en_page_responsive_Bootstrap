@@ -1,7 +1,7 @@
 header, footer{
     font-size: 2rem;
-    text-align: center;
     color: #ccc;
+    text-align: center;
     height: 80px;
 }
 
@@ -10,47 +10,86 @@ header{
 }
 
 footer{
-    background-color: blue;
-}
-
-.b{
-    border: 1px solid black;
+    background-color: brown;
 }
 
 .content > .row{
     height: calc(100vh - 160px);
 }
 
-.main, aside{
-    color: rgba(255, 255, 255);
+.b{
+    border: 1px solid black;
+}
+
+.content .row nav{
+    background-color: greenyellow;
+    text-align: center;
+    color: #fff;
     font-size: 2rem;
 }
 
-.main{
+.content .row .main{
+    background-color: orange;
+}
+
+.content .row .main .row{
+    height: 100%;
+}
+
+.content .row .main .row .article article{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    background-color: rgb(7, 113, 77);
+    height: 100%;
+}
+
+.content .row .main .row .aside aside{
     background-color: violet;
+    color: #fff;
 }
-
-aside{
-    background-color: green;
-}
-
 
 /**
  * MEDIA
  */
 
- @media screen and (max-width: 992px) {
-    .main{
-        order: 2;
-        height: calc(100vh - 240px);
-    }
-    aside{
-        order: 1;
-        height: 80px;
+@media screen and (max-width: 992px) {
+    .content > .row{
+        height: calc(100vh - 160px);
     }
 
-    .content > .row{
-        height: auto;
+    .content .row .main .row .article{
+        height: 70%;
     }
- }
+
+    .content .row .main .row .aside{
+        height: 30%;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+   
+    .content .row .main .row .article{
+        height: 70%;
+    }
+
+    .content .row .main .row .aside{
+        height: 30%;
+    }
+
+    nav{
+        height: 100px;
+    }
+
+    .main{
+        height: calc(100vh - 260px);
+    }
+}
+
+
+
+
+
+
 
