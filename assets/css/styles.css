@@ -1,0 +1,56 @@
+header, footer{
+    font-size: 2rem;
+    text-align: center;
+    color: #ccc;
+    height: 80px;
+}
+
+header{
+    background-color: blue;
+}
+
+footer{
+    background-color: blue;
+}
+
+.b{
+    border: 1px solid black;
+}
+
+.content > .row{
+    height: calc(100vh - 160px);
+}
+
+.main, aside{
+    color: rgba(255, 255, 255);
+    font-size: 2rem;
+}
+
+.main{
+    background-color: violet;
+}
+
+aside{
+    background-color: green;
+}
+
+
+/**
+ * MEDIA
+ */
+
+ @media screen and (max-width: 992px) {
+    .main{
+        order: 2;
+        height: calc(100vh - 240px);
+    }
+    aside{
+        order: 1;
+        height: 80px;
+    }
+
+    .content > .row{
+        height: auto;
+    }
+ }
+

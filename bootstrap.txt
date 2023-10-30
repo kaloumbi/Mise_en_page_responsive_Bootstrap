@@ -1,0 +1,7 @@
+BOOTSTRAP:
+
+    Axe vertical =>
+        -Bloc (row) => align-items-(start|center|end)
+        -Une colonne (col) => align-self-(start|center|end)
+    Axe Horizontal =>
+        -Bloc (row) => justify-content-(start|center|end|between|evenly|around)
