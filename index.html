@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <title>Mise en page Bootstrap</title>
-</head>
-<body>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <title>Mise en page Bootstrap</title>
+    </head>
+    <body>
 
-    <header>HEADER</header>
-    <div class="content">
-        <div class="row g-0">
-            <nav class="col-sm-2 b">NAV</nav>
-            <div class="main b col-sm-10">
-                <div class="row g-0">
-                    <div class="article col-lg-9 p-1">
-                        <article>
-                            ARTICLE
-                        </article>
+        <div class="container p-4">
+            <form action="" id="myForm" novalidate>
+                <div class="row">
+                    <div class="form-input-line col-md-6">
+                        <label for="firstname">First Name</label><br>
+                        <input type="text" class="form-control" name="firstname"
+                            id="firstname" required>
                     </div>
-                    <div class="aside col-lg-3 b p-1">
-                        <div class="row g-0">
-                            <aside class="col-12 mb-1">ASIDE 1</aside>
-                            <aside class="col-12 mb-1">ASIDE 2</aside>
-                            <aside class="col-12">ASIDE 3</aside>
-                        </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        The firstname is required !
+                    </div>
+                    <div class="form-input-line col-md-6">
+                        <label for="firstname">First Name</label><br>
+                        <input type="text" class="form-control" name="firstname"
+                            id="firstname" required>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        The firstname is required !
+                    </div>
+
+                    <div class="form-button col-12 mt-2"><button
+                            class="btn btn-primary">Submit</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </div>
-    <footer>FOOTER</footer>
 
+        <script src="/assets/js/utilities/jquery-3.7.1.min.js"></script>
+        <script src="/assets/js/utilities/popper.min.js"></script>
+        <script src="/assets/js/bootstrap/bootstrap.js"></script>
 
-    
+        <script>
+            const form = document.getElementById("myForm")
+            form.onsubmit = (e)=>{
+                if(!form.checkValidity()){
+                    e.preventDefault()
+                    e.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }
 
-    <script src="/assets/js/utilities/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/utilities/popper.min.js"></script>
-    <script src="/assets/js/bootstrap/bootstrap.js"></script>
-</body>
+        </script>
+
+    </body>
 </html>
